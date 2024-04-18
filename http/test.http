@@ -1,0 +1,51 @@
+### get
+GET localhost:8881/api/recipe/1
+
+### new
+POST localhost:8881/api/recipe/new
+Content-Type: application/json
+Authorization: Basic user@gmail.com 12341234
+
+{
+  "name": "Warming Ginger Tea",
+  "category": "hello",
+  "description": "Ginger tea is a warming drink for cool weather, ...",
+  "ingredients": ["1 inch ginger root, minced", "1/2 lemon, juiced", "1/2 teaspoon manuka honey"],
+  "directions": ["Place all ingredients in a mug and fill with warm water (not too hot so you keep the beneficial honey compounds in tact)", "Steep for 5-10 minutes", "Drink and enjoy"]
+}
+
+### update
+PUT localhost:8881/api/recipe/1
+Content-Type: application/json
+Authorization: Basic user2@gmail.com 12341234
+
+{
+  "name": "Warming Ginger Tea",
+  "category": "hello",
+  "description": "Ginger tea is a warming drink for cool weather, ...",
+  "ingredients": ["1", "2", "3"],
+  "directions": ["Place all ingredients in a mug and fill with warm water (not too hot so you keep the beneficial honey compounds in tact)", "Steep for 5-10 minutes", "Drink and enjoy"]
+}
+
+
+### Invalid (without name)
+POST localhost:8881/api/recipe/new
+Content-Type: application/json
+
+{
+"name": null,
+"description": "Ginger tea is a warming drink for cool weather, ...",
+"ingredients": ["1 inch ginger root, minced", "1/2 lemon, juiced", "1/2 teaspoon manuka honey"],
+"directions": ["Place all ingredients in a mug and fill with warm water (not too hot so you keep the beneficial honey compounds in tact)", "Steep for 5-10 minutes", "Drink and enjoy"]
+}
+
+### Invalid (null array)
+POST localhost:8881/api/recipe/new
+Content-Type: application/json
+
+{
+  "name": "asdf",
+  "description": "Ginger tea is a warming drink for cool weather, ...",
+  "ingredients": null,
+  "directions": ["Place all ingredients in a mug and fill with warm water (not too hot so you keep the beneficial honey compounds in tact)", "Steep for 5-10 minutes", "Drink and enjoy"]
+}

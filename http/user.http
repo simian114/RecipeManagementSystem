@@ -1,0 +1,27 @@
+### new
+POST localhost:8881/api/register
+Content-Type: application/json
+
+{
+  "email": "user2@gmail.com",
+  "password": "12341234"
+}
+
+### invalid email
+POST localhost:8881/api/register
+Content-Type: application/json
+
+{
+  "email": "user@gmam",
+  "password": "12341234"
+}
+
+
+### invalid password
+POST localhost:8881/api/register
+Content-Type: application/json
+
+{
+  "email": "user@gmail.com",
+  "password": "123434"
+}

@@ -1,0 +1,8 @@
+### search using name. ignore case
+GET localhost:8881/api/recipe/search?name=WARMING
+
+### search using category
+GET localhost:8881/api/recipe/search?category=hELLO
+
+### search name with category
+GET localhost:8881/api/recipe/search?category=hELLO&name=asdf
