@@ -1,5 +1,6 @@
 ### get
 GET localhost:8881/api/recipe/1
+Authorization: Basic user@gmail.com 12341234
 
 ### new
 POST localhost:8881/api/recipe/new
